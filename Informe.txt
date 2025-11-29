@@ -1,0 +1,15 @@
+- Análisis comparativo:
+- ¿Cuándo es mejor usar una Pila vs. una Cola?
+
+Rta=Depende del orden que necesitamos procesar la informacion.Es mejor usar pila(LIFO) cuando la prioridad la tiene lo más reciente.LIFO (Last In, First Out).
+Por otro lado, la Cola (Queue) es necesaria cuando debemos respetar el orden de llegada, bajo el principio FIFO (First In, First Out).
+
+
+
+- ¿Qué ventajas tiene implementar Pilas y Colas con Listas Enlazadas vs. Arrays?
+-Los arreglos tienen una capacidad fija,en cambio las listas enlazadas, en cambio, crecen y decrecen dinámicamente según la necesidad.
+
+- Ejemplos de situaciones del mundo real donde estas estructuras son útiles
+Una situacion real de Pilas (LIFO): Se usan en la función "Deshacer" (Ctrl+Z) de los editores de texto, ya que el programa necesita recordar la última acción realizada para revertirla.
+
+Una situacion real de Colas (FIFO): Se usan en una playlist de musica donde se agrega musica y a medida que se va reproduciendo va saliendo de la cola.
