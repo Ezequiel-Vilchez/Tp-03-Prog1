@@ -9,7 +9,7 @@ public class Profesor extends Persona implements MiembroUniversidad {
         this.especialidad = especialidad;
         this.aniosDeExperencia = aniosDeExperencia;
         this.materiasAsignadas = new ListaEnlazada();
-        this.turnosConsultas = new Cola();//inicializa la cola vacia
+        this.turnosConsultas = new Cola();
     }
 
     public void asignarMateria(Materia materia) {
@@ -17,19 +17,19 @@ public class Profesor extends Persona implements MiembroUniversidad {
         materiasAsignadas.agregar(materia);
         System.out.println("El profesor " + this.getNombre() + " se ha inscrito a la materia: " + materia.getNombre());
     }
-    //agrega un turno a la cola
+    
     public void agregarConsulta(Estudiante estudiante,String motivo, String horaLlegada, int duracionEstimada){
-        //se crea el objeto turno con todos los datos requeridos
+        
         TurnoConsulta turno = new TurnoConsulta(estudiante,motivo,horaLlegada,duracionEstimada);
 
-        //lo metemos al final de la cola
+        
         turnosConsultas.insertar(turno);
         System.out.println("Turno asignado a " + estudiante.getNombre() + "(" + horaLlegada + ") con el profesor " + this.getNombre());
     }
-    //metodo para atender al siguiente estudiante en la cola
+    
     public void atenderSiguienteEstudiante(){
         if(!turnosConsultas.estaVacia()){
-            //sacamos el primero de la fila
+            
             TurnoConsulta turno = (TurnoConsulta) turnosConsultas.quitar();
             System.out.println("El profesor "+ this.getNombre() + " esta atendiendo a " + turno.getEstudiante().getNombre());
             System.out.println("Detalle: "+ turno.toString());

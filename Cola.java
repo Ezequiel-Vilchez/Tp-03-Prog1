@@ -5,12 +5,12 @@ public class Cola {
         this.lista = new ListaEnlazada();
     }
 
-    //Insertar al final de la cola
+    
     public void insertar(Object dato){
-        lista.agregar(dato);//uso el metodo que estaba en listaenlazada para agregarlo al final de la cola
+        lista.agregar(dato);
     }
 
-    //Quitar del inicio de la cola
+    
     public Object quitar(){
         return lista.eliminarInicio();
     }

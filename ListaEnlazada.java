@@ -62,26 +62,26 @@ public class ListaEnlazada {
         return array;
     }
 
-    // Método necesario para Pila (push)
+    
     public void agregarAlInicio(Object dato) {
         Nodo nuevo = new Nodo(dato);
         if (this.primero == null) {
             this.primero = nuevo;
-        } else {//Si la lista no esta vacia se pone al nuevo delante de todos.
+        } else {
             nuevo.siguiente = this.primero;
             this.primero = nuevo;
         }
         tamano++;
     }
 
-    // Método necesario para Pila (pop) y Cola (dequeue)
+    
     public Object eliminarInicio() {
         if (this.primero == null) {
             return null;
         }
 
-        Object dato = this.primero.dato;//Antes de borrar al nodo, necesitas guardar lo que tiene adentro,en una variable temporal.
-        this.primero = this.primero.siguiente;//Al mover el puntero this.primero al segundo nodo,el primero queda borrado.
+        Object dato = this.primero.dato;
+        this.primero = this.primero.siguiente;
         tamano--;
         return dato;
     }
